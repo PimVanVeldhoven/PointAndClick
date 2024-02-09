@@ -71,6 +71,28 @@ body {
     width: 64px;
     height: 64px;
     background-color: #00ff00;
+    left: 400px;
+    top: 150px;
+    opacity: 1;
+    transition: all 1s ease-in-out
+}
+
+#door {
+    width: 34px;
+    height: 64px;
+    background-color: #ff8400;
+    right: 100px;
+    top: 10px;
+    transition: all 1s ease-in-out
+}
+
+#key {
+    width: 8px;
+    height: 8px;
+    background-color: #fff200;
+    left: 10px;
+    bottom: 100px;
+    transition: all 1s ease-in-out
 }
 
 #hero {
@@ -89,6 +111,7 @@ body {
 .character {
     position: absolute;
     z-index: 100;
+    transition: all 1s ease-in-out;
 }
 
 .foreGround {
