@@ -23,9 +23,10 @@ body {
 #inventoryBox {
     width: 180px;
     height: 80px;
-    background-color: #ee6f00;
+    background-color: #000000;
     top: 10px;
     left: 10px;
+    color: #FFFFFF;
 }
 
 #dialogueBar {
@@ -87,11 +88,11 @@ body {
 }
 
 #key {
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
     background-color: #fff200;
-    left: 10px;
-    bottom: 100px;
+    left: 490px;
+    top: 170px;
     transition: all 1s ease-in-out
 }
 

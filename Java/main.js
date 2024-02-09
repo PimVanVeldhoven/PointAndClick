@@ -3,6 +3,8 @@ document.getElementById("mainTitle").innerText = "Point And Click Adventure"
 //Game window reference
 const gameWindow = document.getElementById("gameWindow");
 
+//inventory
+const inventoryList = document.getElementById("inventoryList")
 //Main charachter
 const mainCharacter = document.getElementById("hero");
 const offsetCharacter = 16;
@@ -22,11 +24,16 @@ gameWindow.onclick = function (e) {
 
     switch (e.target.id) {
         case "squareTree": tree1.style.opacity = 0.5;
-            break;
+
         case "door": door1.style.opacity = 0.5;
-            break;
-        case "key": key1.style.opacity = 0;
-            break;
+            break
+        case "key": console.log("found the key")
+            document.getElementById("key").remove();
+            const keyElement = document.createElement("li");
+            keyElement.id = "inv-key";
+            keyElement.innerText = "key";
+            inventoryList.appendChild(keyElement);
+            break
 
         default: tree1.style.opacity = 1; door1.style.opacity = 1;
     }
