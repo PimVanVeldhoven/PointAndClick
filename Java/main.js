@@ -44,6 +44,9 @@ gameWindow.onclick = function (e) {
             getItem("Holy water", "holyWater");
             getItem("Coin", "coin");
             break
+        case "statue":
+            console.log("Have you come looking for the key well i can tell you where it is it is ");
+            break
 
         default: door1.style.opacity = 1;
     }

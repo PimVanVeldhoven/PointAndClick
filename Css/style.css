@@ -42,10 +42,9 @@ body {
 
 #heroAvatar {
     width: 72px;
-    height: 64px;
-    background-color: #0011ff;
+    height: 68px;
     left: 0px;
-    top: 0px;
+    bottom: 0px;
 }
 
 #heroSpeech {
@@ -64,9 +63,10 @@ body {
 
 #counterAvatar {
     width: 72px;
-    height: 64px;
+    height: 68px;
     background-color: #ff0000;
     right: 0px;
+    bottom: 0px;
 }
 
 #door {
@@ -93,6 +93,14 @@ body {
     background-color: #0015ff;
     top: 100px;
     left: 100px;
+}
+
+#statue {
+    width: 32px;
+    height: 64px;
+    top: 400px;
+    right: 200px;
+    background-color: #656464;
 }
 
 #hero {
