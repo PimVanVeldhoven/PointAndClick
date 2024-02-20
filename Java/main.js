@@ -4,6 +4,7 @@ document.getElementById("mainTitle").innerText = "Point And Click Adventure"
 const gameWindow = document.getElementById("gameWindow");
 
 //inventory
+let inventory = [];
 const inventoryList = document.getElementById("inventoryList")
 //Main charachter
 const mainCharacter = document.getElementById("hero");
@@ -19,23 +20,70 @@ gameWindow.onclick = function (e) {
     var y = e.clientY - rect.top;
 
     //todo  calc offset based on charachter
-    mainCharacter.style.left = x - offsetCharacter + "px";
-    mainCharacter.style.top = y - offsetCharacter + "px";
+    if (e.target.id != "heroImage") {
+        mainCharacter.style.left = x - offsetCharacter + "px";
+        mainCharacter.style.top = y - offsetCharacter + "px";
+    }
 
     switch (e.target.id) {
-        case "squareTree": tree1.style.opacity = 0.5;
-
-        case "door": door1.style.opacity = 0.5;
+        case "door":
+            if (checkItem("Rusty key")) {
+                console.log("Door opened");
+                door1.style.opacity = 0.5;
+            } else if (checkItem("Coin")) {
+                console.log("Money cannot open a door and the coin broke");
+                removeItem(Coin, coin);
+            } else {
+                console.log("Door stuck help");
+            }
             break
-        case "key": console.log("found the key")
-            document.getElementById("key").remove();
-            const keyElement = document.createElement("li");
-            keyElement.id = "inv-key";
-            keyElement.innerText = "key";
-            inventoryList.appendChild(keyElement);
+        case "key":
+            getItem("Rusty key", "rustyKey");
+            break
+        case "lake":
+            getItem("Holy water", "holyWater");
+            getItem("Coin", "coin");
             break
 
-        default: tree1.style.opacity = 1; door1.style.opacity = 1;
+        default: door1.style.opacity = 1;
+    }
+
+
+
+    /**
+     * checks if the value exists within the array if not it adds the value to the array and uses show item function
+     * @param {string} itemName 
+     * @param {string} itemId 
+     */
+    function getItem(itemName, itemId) {
+        if (!checkItem(itemName)) {
+            inventory.push(itemName);
+            showItem(itemName, itemId);
+        }
+        console.log(inventory);
+    }
+
+    function checkItem(itemName) {
+        return inventory.includes(itemName);
+    }
+    /**
+     * Needs a name for displaying item and htlm id name
+     * @param {string} itemName 
+     * @param {string} itemId 
+     */
+    function showItem(itemName, itemId) {
+        console.log("you found a " + itemName + "!")
+        const keyElement = document.createElement("li");
+        keyElement.id = itemId;
+        keyElement.innerText = itemName;
+        inventoryList.appendChild(keyElement);
+    }
+
+    function removeItem(itemName, itemId) {
+        inventory = inventory.filter(function (newInventory) {
+            return newInventory !== itemName;
+        });
+        document.getElementById(itemId).remove
     }
 
 }
