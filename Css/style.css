@@ -81,7 +81,7 @@ body {
 #key {
     width: 16px;
     height: 16px;
-    background-color: #fff200;
+    background-color: #543c08;
     left: 490px;
     top: 170px;
     transition: all 1s ease-in-out
@@ -101,6 +101,14 @@ body {
     top: 400px;
     right: 200px;
     background-color: #656464;
+}
+
+#coin {
+    width: 8px;
+    height: 8px;
+    top: 400px;
+    left: 100px;
+    background-color: #fff200;
 }
 
 #hero {
