@@ -37,7 +37,6 @@ body {
     position: relative;
     width: 800px;
     height: 64px;
-    background-color: #000000;
 }
 
 #heroAvatar {
@@ -45,6 +44,7 @@ body {
     height: 68px;
     left: 0px;
     bottom: 0px;
+    transition: all 1s ease-in-out
 }
 
 #heroSpeech {
@@ -52,6 +52,7 @@ body {
     height: 30px;
     background-color: #95aaff;
     left: 72px;
+    opacity: 0;
 }
 
 #counterSpeech {
@@ -59,13 +60,22 @@ body {
     height: 30px;
     background-color: #ffa3a3;
     right: 72px;
+    opacity: 0;
 }
 
 #counterAvatar {
     width: 72px;
     height: 68px;
-    background-color: #ff0000;
     right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    transition: all 1s ease-in-out
+}
+
+#brownBar {
+    background-color: #3d251e;
+    height: 32px;
+    width: 800px;
     bottom: 0px;
 }
 
@@ -134,4 +144,12 @@ body {
 .foreGround {
     position: absolute;
     z-index: 1000;
+}
+
+.speechBubble {
+    border-radius: 60px;
+    padding: 5px 5px 5px 10px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 1s ease-in-out
 }
