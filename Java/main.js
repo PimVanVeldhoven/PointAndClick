@@ -63,7 +63,7 @@ function runGame() {
                 changeInventory("Rusty_Key", 'add');
                 break
             case "lake":
-                changeInventory("Holy water", 'add');
+                changeInventory("HolyWater", 'add');
                 break
             case "statue":
                 console.log("Have you come looking for the key well i can tell you where it is..... it is the yellow block");
