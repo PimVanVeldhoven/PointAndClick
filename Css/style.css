@@ -81,51 +81,47 @@ body {
 
 #door {
     width: 34px;
-    height: 64px;
+    height: 32px;
     background-color: #ff8400;
-    right: 100px;
-    top: 10px;
+    right: 350px;
+    top: 0px;
     transition: all 1s ease-in-out
 }
 
 #key {
-    width: 16px;
-    height: 16px;
-    background-color: #543c08;
-    left: 490px;
-    top: 170px;
+    width: 64px;
+    height: 64px;
+    left: 290px;
+    top: 480px;
     transition: all 1s ease-in-out
 }
 
 #lake {
-    width: 64px;
-    height: 64px;
-    background-color: #0015ff;
-    top: 100px;
-    left: 100px;
+    width: 112px;
+    height: 112px;
+    top: 235px;
+    left: 335px;
 }
 
 #statue {
-    width: 32px;
-    height: 64px;
-    top: 400px;
-    right: 200px;
-    background-color: #656464;
+    width: 36px;
+    height: 68px;
+    top: 214px;
+    right: 30px;
 }
 
 #coin {
-    width: 8px;
-    height: 8px;
-    top: 400px;
-    left: 100px;
-    background-color: #fff200;
+    width: 32px;
+    height: 40px;
+    top: 304px;
+    left: 32px;
 }
 
 #hero {
     width: 32px;
     height: 32px;
-    top: 100px;
-    left: 400px;
+    bottom: 70px;
+    left: 65px;
 }
 
 #tileMap {}
