@@ -82,7 +82,7 @@ body {
 #door {
     width: 34px;
     height: 32px;
-    background-color: #ff8400;
+    background-color: #6F4E37;
     right: 350px;
     top: 0px;
     transition: all 1s ease-in-out
@@ -120,7 +120,9 @@ body {
 #hero {
     width: 32px;
     height: 32px;
-    bottom: 70px;
+    top: 505px;
+    /*Have to use top if use bottom it screws over the movement on the first move for some weird reason and it dusnt do it with top
+    it only ruins the up and down movement on the first move but still a bug not a big one so fixed with changing back to top */
     left: 65px;
 }
 
