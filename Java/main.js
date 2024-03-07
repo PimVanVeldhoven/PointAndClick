@@ -98,6 +98,7 @@ gameWindow.onclick = function (e) {
                 }
                 break
             case "lake":
+                showMessage(heroSpeech, "This water isnt normal water luckly i have a bottle to take it with me", heroAudio)
                 changeInventory("HolyWater", 'add');
                 saveGameState(gameState);
                 break
@@ -112,6 +113,7 @@ gameWindow.onclick = function (e) {
                 setTimeout(function () { counterAvatar.style.opacity = 0; }, 24 * sec)
                 break
             case "coin":
+                showMessage(heroSpeech, "O a coin.", heroAudio)
                 document.getElementById("coin").remove()
                 changeInventory("coin", 'add');
                 saveGameState(gameState);
