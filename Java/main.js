@@ -74,25 +74,28 @@ gameWindow.onclick = function (e) {
         switch (e.target.id) {
             case "door":
                 if (checkItem("Rusty_Key")) {
-                    console.log("Door opened");
+                    console.log("Door open attempt");
                     changeInventory("Rusty_Key", "remove")
                     door1.style.opacity = 0.5;
                     saveGameState(gameState);
                 } else if (checkItem("coin")) {
-                    showMessage(heroSpeech, "Money cannot open a door and the coin broke")
-                    console.log("Money cannot open a door and the coin broke");
+                    showMessage(heroSpeech, "Money cannot open a door and the coin broke", heroAudio)
                     changeInventory("coin", "remove");
                     saveGameState(gameState);
                 } else {
-                    showMessage(heroSpeech, "Door stuck help")
-                    console.log("Door stuck help");
+                    showMessage(heroSpeech, "I cant open the door maybe a key can open it", heroAudio)
                 }
                 break
             case "key":
-                document.getElementById("key").remove();
-                changeInventory("Rusty_Key", 'add');
-                gameState.keyPickedUp = true;
-                saveGameState(gameState);
+                if (checkItem("HolyWater")) {
+                    document.getElementById("key").remove();
+                    changeInventory("Rusty_Key", 'add');
+                    showMessage(heroSpeech, "Kind of a waste to use HolyWater but i dont have normal water atleast i got the key", heroAudio)
+                    gameState.keyPickedUp = true;
+                    saveGameState(gameState);
+                } else {
+                    showMessage(heroSpeech, "It seems like i can dig here but its to hard to dig maybe water can fix that.", heroAudio)
+                }
                 break
             case "lake":
                 changeInventory("HolyWater", 'add');
